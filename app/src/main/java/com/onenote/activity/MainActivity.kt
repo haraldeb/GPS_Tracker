@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         startActivity(intent)
 
 
+
         return true
     }
 
