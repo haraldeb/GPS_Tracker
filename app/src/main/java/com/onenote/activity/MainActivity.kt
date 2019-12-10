@@ -71,9 +71,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         //TrackShowActivity öffnen
         val intent = Intent(this, TrackRecordActivity::class.java)
         startActivity(intent)
-
-
-
         return true
     }
 
