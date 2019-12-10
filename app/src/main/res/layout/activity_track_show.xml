@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMain"
+        android:layout_width="match_parent"
+        style="@style/Toolbar"
+        />
+
+
+    <EditText
+        android:id="@+id/etTitel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackTitle"
+        android:layout_margin="@dimen/paddingMedium"
+        android:hint="@string/hinttitel"/>
+    <EditText
+        android:id="@+id/etText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackText"
+        android:layout_margin="@dimen/paddingMedium"
+        android:hint="@string/hinttext"/>/>
+
+    <TextView
+        android:id="@+id/tvKoordinaten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackText"
+        android:layout_margin="@dimen/paddingMedium"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/paddingMedium"
+        android:text="@string/save"
+        style="@style/Button"/>
+</LinearLayout>

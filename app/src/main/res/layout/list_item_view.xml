@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingMedium"
+    tools:context=".activity.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvTrackTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackTitle.Item"
+        tools:text="Title (2km)"/>
+
+    <TextView
+        android:id="@+id/tvTrackStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackText.Item"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/paddingMedium"
+        tools:text="01.01.2019 10:00:00" />
+
+    <TextView
+        android:id="@+id/tvTrackStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrackText.Item"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/paddingMedium"
+        tools:text="01.01.2019 11:00:00" />
+
+</LinearLayout>

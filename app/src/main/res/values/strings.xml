@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GPS Tracker</string>
+    <string name="logged_in">Logged in</string>
+    <string name="hello_kotlin">Hello Kotlin</string>
+    <string name="agree">Agree</string>
+    <string name="add">Add</string>
+    <string name="hinttitel">Title</string>
+    <string name="hinttext">Text</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="location">location: %s, %s</string>
+    <string name="hint">Do not use this GPS App while driving.</string>
+    <string name="startrecord">Start GPS Tracking</string>
+    <string name="stoprecord">Stop GPS Tracking</string>
+    <string name="gpsrecord">GPS Recording</string>
+    <string name="showgpsrecord">GPS Track</string>
+</resources>
