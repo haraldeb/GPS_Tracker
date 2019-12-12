@@ -1,4 +1,4 @@
-package com.onenote.adapter
+package com.gpstrack.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.onenote.R
-import com.onenote.model.Track
+import com.gpstrack.R
+import com.gpstrack.model.Track
 
 class TrackAdapter(context: Context, var tracks: List<Track>): BaseAdapter() {
 

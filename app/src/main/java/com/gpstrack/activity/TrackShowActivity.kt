@@ -1,7 +1,7 @@
-package com.onenote.activity
+package com.gpstrack.activity
 
 
-import com.onenote.prefereces.Preferences
+import com.gpstrack.prefereces.Preferences
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
@@ -10,10 +10,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import com.onenote.R
-import com.onenote.constants.Constants
-import com.onenote.database.DatabaseHelper
-import com.onenote.model.Track
+import com.gpstrack.R
+import com.gpstrack.constants.Constants
+import com.gpstrack.database.DatabaseHelper
+import com.gpstrack.model.Track
 import kotlinx.android.synthetic.main.activity_main.tbMain
 import kotlinx.android.synthetic.main.activity_track_show.*
 

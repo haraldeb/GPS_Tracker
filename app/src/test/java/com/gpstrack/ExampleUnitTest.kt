@@ -1,4 +1,4 @@
-package com.onenote
+package com.gpstrack
 
 import org.junit.Test
 

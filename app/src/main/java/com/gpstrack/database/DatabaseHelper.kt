@@ -1,12 +1,12 @@
-package com.onenote.database
+package com.gpstrack.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.onenote.model.Track
-import com.onenote.model.Trackpoint
+import com.gpstrack.model.Track
+import com.gpstrack.model.Trackpoint
 
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null,DATABASE_VERSION) {
@@ -45,7 +45,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     //INsertmethode
-    fun insertNote(track: Track) : Long {
+    fun insertTrack(track: Track) : Long {
         return writableDatabase.insert(DATABASE_TABLE_NAME, null, trackToContentValues(track))
     }
 
@@ -62,12 +62,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return values
     }
 
-    private fun serializeMe(trackpoints : List<Trackpoint>): String {
+    private fun serializeMe(trackpoints : MutableList<Trackpoint>): String {
         //TODO: Methode zum serialisieren ausprogrammieren
         return "abc"
     }
 
-    private fun deserializeMe(serialstring : String): List<Trackpoint> {
+    private fun deserializeMe(serialstring : String): MutableList<Trackpoint> {
         //TODO: Methode zum deserialiseren ausprogrammieren
         val point = Trackpoint(234242342,30.32,23.2)
         val points = ArrayList<Trackpoint>()

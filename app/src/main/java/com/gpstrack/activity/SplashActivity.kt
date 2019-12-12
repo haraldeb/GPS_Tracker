@@ -1,11 +1,11 @@
-package com.onenote.activity
+package com.gpstrack.activity
 
-import com.onenote.prefereces.Preferences
+import com.gpstrack.prefereces.Preferences
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.onenote.R
+import com.gpstrack.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), View.OnClickListener {

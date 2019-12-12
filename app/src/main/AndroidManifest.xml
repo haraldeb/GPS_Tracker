@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.onenote">
+    package="com.gpstrack">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/gps"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashActivity" android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name="com.gpstrack.activity.SplashActivity" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -20,15 +20,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.MainActivity"
+        <activity android:name="com.gpstrack.activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".activity.TrackRecordActivity"
+        <activity android:name="com.gpstrack.activity.TrackRecordActivity"
             android:label="@string/gpsrecord"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".activity.TrackShowActivity"
+        <activity android:name="com.gpstrack.activity.TrackShowActivity"
             android:label="@string/showgpsrecord"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

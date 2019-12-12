@@ -1,10 +1,9 @@
-package com.onenote.activity
+package com.gpstrack.activity
 
 
 import android.Manifest
-import com.onenote.prefereces.Preferences
+import com.gpstrack.prefereces.Preferences
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.location.Location
@@ -18,19 +17,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.onenote.R
-import com.onenote.constants.Constants
-import com.onenote.database.DatabaseHelper
-import com.onenote.model.Note
-import android.content.Intent
-import android.net.Uri
-import android.os.Build
-import android.os.VibrationEffect
-import android.os.Vibrator
-import androidx.fragment.app.Fragment
+import com.gpstrack.R
+import com.gpstrack.constants.Constants
+import com.gpstrack.database.DatabaseHelper
 import kotlinx.android.synthetic.main.activity_track_show.*
 import kotlinx.android.synthetic.main.activity_track_record.*
-import com.onenote.model.Track
+import com.gpstrack.model.Track
+import com.gpstrack.model.Trackpoint
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 class TrackRecordActivity : AppCompatActivity(), View.OnClickListener, DialogInterface.OnClickListener {
@@ -89,8 +84,12 @@ class TrackRecordActivity : AppCompatActivity(), View.OnClickListener, DialogInt
                 lastLocation = task.result
 
                 lastLocation?.let {
-                    //latitude = it.latitude
-                    //longitude = it.longitude
+                    var trackpoint: Trackpoint? = null
+                    trackpoint?.latitude = it.latitude
+                    trackpoint?.longitude = it.longitude
+                    trackpoint?.timestamp = System.currentTimeMillis()
+                    track?.GPSPoints?.add(trackpoint!!)
+
                 }
             }
         } else {
@@ -133,19 +132,44 @@ class TrackRecordActivity : AppCompatActivity(), View.OnClickListener, DialogInt
     }
 
     override fun onClick(v: View?) {
-        if (v == btnSave) {
-            val title = etTitel.text.toString()
+        if (v == btnStartRecord) {
 
+            val toast = Toast.makeText(applicationContext, "Starte Recording",Toast.LENGTH_SHORT)
+            toast.show()
 
-
+            //Create new Track
             track?.let {
-                it.title = title
-                db.updateTrack(it)
+                it.starttimestamp = System.currentTimeMillis()
+                it.title = "Test"
+                //db.updateNote(it)
             }
 
-            }
 
-            finish()
+            //todo: mit checkLastLocation wird nur ein punkt aufgenommen!
+            checkLastLocation()
+            //Toast.makeText(applicationContext, track!!.GPSPoints[0].longitude.toString(),Toast.LENGTH_SHORT)
+            //track?.let {
+            //    it.title = title
+            //    db.updateTrack(it)
+            //}
+
+        }
+        if (v == btnStopRecord) {
+            track?.let {
+                it.stoptimestamp = System.currentTimeMillis()
+                val toast = Toast.makeText(applicationContext, "Stoppe REcording",Toast.LENGTH_SHORT)
+
+
+                toast.show()
+                db.insertTrack(it)
+
+
+
+
+            }
+            //finish()
+        }
+
 
 
     }

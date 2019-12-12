@@ -1,4 +1,4 @@
-package com.onenote.constants
+package com.gpstrack.constants
 
 class Constants {
     companion object {

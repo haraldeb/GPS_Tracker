@@ -1,6 +1,6 @@
-package com.onenote.activity
+package com.gpstrack.activity
 
-import com.onenote.prefereces.Preferences
+import com.gpstrack.prefereces.Preferences
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,10 +9,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
-import com.onenote.R
-import com.onenote.adapter.TrackAdapter
-import com.onenote.constants.Constants
-import com.onenote.database.DatabaseHelper
+import com.gpstrack.R
+import com.gpstrack.adapter.TrackAdapter
+import com.gpstrack.constants.Constants
+import com.gpstrack.database.DatabaseHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemClickListener {
